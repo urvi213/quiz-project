@@ -1,8 +1,6 @@
-> TEST SET 1 <
--question1/answer1-question2/answer2
-> TEST SET 2 <
--question3/answer3-question4/answer4
->hi<
--q1/a1-q2/a2
->question set<
--1/a1-2/a2-3/a3-4/a4-5/a5
+> Die Ferien (no umlauts) <
+-planned the journey/die Reise geplannt-packed a suitcase/einen Koffer gepackt-lazed around the beach/am Strand gefaulenzt-rented a holiday house/ein Ferienhaus gemietet-stayed in a B&B/in einer Pension gewohnt-cost a fortune/ein Vermogen gekostet-took 5 hours/5 Stunden gedauert
+> Spanish Week 1 <
+-to reply/contestar-to deliver/entregar-to sign/firmar-2 years ago/hace doce anos-degree/carrera-company/empresa-business/negocio
+> Unit Prefixes (full names, not symbols) <
+-*0.000 000 000 001/pico-*0.000 000 001/nano-*0.000 0001/micro-*0.001/milli-*1 000/kilo-*1 000 000/mega-*1 000 000 000/giga-*1 000 000 000 000/tera
