@@ -87,7 +87,8 @@ def submit_ans():
             result_label.config(text="correct")
             time.sleep(0.5)
             answer_entry.config(state="normal")
-
+            answer_entry.delete(0,END)
+        
         else:
             answer_entry.config(state="disabled")
             result_label.config(text="incorrect")
@@ -121,7 +122,7 @@ def create_new_set():
     global create_set_entry, new_set_question_label, new_set, choosing, new_set_window
     create_btn.config(state="disabled")
     new_set = []
-    choosing = "name"
+    choosing = "name of test?"
     new_set_window = Tk()
     new_set_question_label = Label(new_set_window,text=choosing+"?",font=font.Font(size=30))
     new_set_question_label.grid(row=0,column=0,padx=10,pady=10)
@@ -141,13 +142,14 @@ def set_creation_submit():
     else:
         submission = create_set_entry.get()
 
-        if choosing == "name":
+        if choosing == "name of test?":
              name = submission
              new_set.append(name)
              new_set.append({})
              create_set_entry.config(state="disabled")
              time.sleep(0.5)
              create_set_entry.config(state="normal")
+             create_set_entry.delete(0,END)
              choosing = "amount of questions"
              new_set_question_label.config(text=choosing+"?")
 
@@ -163,6 +165,7 @@ def set_creation_submit():
                 create_set_entry.config(state="disabled")
                 time.sleep(0.5)
                 create_set_entry.config(state="normal")
+                create_set_entry.delete(0,END)
 
         elif type(choosing) == float:
             if choosing.is_integer():
@@ -171,6 +174,7 @@ def set_creation_submit():
                 create_set_entry.config(state="disabled")
                 time.sleep(0.5)
                 create_set_entry.config(state="normal")
+                create_set_entry.delete(0,END)
                 new_set_question_label.config(text="answer "+str(int(choosing))+"?")
             else:
                 #print(question,length)
@@ -179,6 +183,7 @@ def set_creation_submit():
                 create_set_entry.config(state="disabled")
                 time.sleep(0.5)
                 create_set_entry.config(state="normal")
+                create_set_entry.delete(0,END)
                 if choosing > length:
                     print("done")
                     create_btn.config(state="active")
@@ -206,10 +211,10 @@ root = Tk()
 title_label = Label(root,text="Self Quizzer!!",font=font.Font(size=30))
 title_label.grid(column=0,row=0,padx=10,pady=10)
 
-quiz_btn = Button(root,text="quiz",bg="pink",font=font.Font(size=20),command=load_set_selection)
+quiz_btn = Button(root,text="take quiz",bg="pink",font=font.Font(size=20),command=load_set_selection)
 quiz_btn.grid(column=0,row=1,padx=10,pady=10)
 
-create_btn = Button(root,text="new set of questions",bg="pink",font=font.Font(size=20),command=create_new_set)
+create_btn = Button(root,text="add new set of questions",bg="pink",font=font.Font(size=20),command=create_new_set)
 create_btn.grid(column=0,row=2,padx=10,pady=10)
 
 read_file()
